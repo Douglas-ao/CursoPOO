@@ -1,0 +1,46 @@
+package application;
+
+import java.util.Scanner;
+
+public class ProgramDois {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int p = sc.nextInt();
+		int[][] mat = new int[n][p];
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < p; j++) {
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		
+		int z = sc.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < p; j++) {
+				if (mat[i][j] == z){
+					System.out.println("Position " + i + "," + j + ":");
+				}
+				if (mat[i][j] == z){
+					System.out.println("Left: " + mat[i][j-1]);
+				}
+				if (mat[i][j] == z){
+					System.out.println("Right: " + mat[i][j+1]);
+				}
+				if (mat[i][j] == z){
+					System.out.println("Up: " + mat[i-1][j]);
+				}
+				if (mat[i][j] == z){
+					System.out.println("Down: " + mat[i+1][j]);
+				}
+			}
+		}
+		
+		sc.close();
+	}
+
+}
